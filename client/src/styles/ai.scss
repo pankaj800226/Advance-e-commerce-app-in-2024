@@ -1,0 +1,189 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+  height: 90vh;
+  justify-content: space-between;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: 100%;
+  background-color: #27222d;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  color: black;
+
+  .top_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  h2 {
+    color: rgb(255, 255, 255);
+  }
+
+  .suggestion-container {
+    overflow-x: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease-in-out;
+
+    .data {
+      margin: 10px;
+      width: 60%;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: rgb(19, 19, 19);
+      color: white;
+      .data_header {
+        width: fit-content;
+        background: rgb(2, 0, 36);
+        color: black;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+
+        aside {
+          cursor: pointer;
+          color: black;
+        }
+      }
+
+      .qst {
+        color: whitesmoke;
+        font-size: 18px;
+        padding: 10px;
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .prompt-form {
+    display: flex;
+    flex-direction: column;
+
+    .input-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+
+      button {
+        padding: 15px 30px;
+        // background: linear-gradient(135deg, #222222, #444444);
+        color: #fff; /* White text for button */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.5s;
+        border-radius: 30px;
+        background: rgb(17, 15, 39);
+        outline: 0;
+        border: 0;
+
+        &:hover {
+          transform: translate(6px);
+          background: linear-gradient(135deg, #0c0321, #360f41);
+        }
+      }
+    }
+
+    .input-container input {
+      flex: 1;
+      padding: 14px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      font-size: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      color: white;
+      outline: 0;
+      border: 0;
+      border-radius: 30px;
+      // background: #222;
+      background: rgb(17, 15, 39);
+    }
+
+    .select-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    select,
+    input[type="number"] {
+      padding: 9px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      cursor: pointer;
+      color: black;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+  }
+}
+
+/* Typing animation CSS */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  animation: typing 1.2s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .chat-container {
+    .suggestion-container {
+      .data {
+        width: 100%;
+      }
+    }
+  }
+}

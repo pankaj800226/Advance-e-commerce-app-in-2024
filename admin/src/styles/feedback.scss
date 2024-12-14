@@ -1,0 +1,51 @@
+/* Feedback.css */
+
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.feedback_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feedback_item {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback_item p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.feedback_item span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.delete_button {
+    background-color: #ff5c5c;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete_button:hover {
+    background-color: #e04a4a;
+}

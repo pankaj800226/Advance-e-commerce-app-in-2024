@@ -1,0 +1,145 @@
+/* Layout */
+
+/* Manage Container */
+.manage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow-x: scroll;
+  cursor: pointer;
+}
+
+.manage-card {
+  cursor: pointer;
+  overflow-x: scroll;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Title */
+.manage-title {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Product Table */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.product-table th,
+.product-table td {
+  padding: 10px;
+  // text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-table th {
+  // background-color: #c82333;
+  background-color: #222;
+  color: white;
+}
+.product-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Product Image */
+.product-table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Action Buttons */
+.edit-btn,
+.delete-btn {
+  padding: 8px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.edit-btn {
+  // background-color: #ffc107;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.pagination_stack {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 1100px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .manage-card {
+    padding: 1.5rem;
+  }
+
+  .product-table th,
+  .product-table td {
+    font-size: 14px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 10px;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .manage-title {
+    font-size: 20px;
+  }
+
+  .product-table img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 10px;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

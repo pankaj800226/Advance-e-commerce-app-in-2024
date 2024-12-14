@@ -1,0 +1,33 @@
+.rating_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+
+  .all_feedback {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    .delete_icon {
+      position: relative;
+      left: 0;
+    }
+  }
+  .profieImg {
+    margin-right: 16px;
+  }
+  .feedback_details {
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .rating_container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}

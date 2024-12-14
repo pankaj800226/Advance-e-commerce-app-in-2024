@@ -1,0 +1,21 @@
+.banner {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  img {
+    border-radius: 8px;
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .banner {
+    // width: 100%;
+    padding: 0px;
+    img {
+      border-radius: 0px;
+      // height: 50vh;
+      height: auto;
+    }
+  }
+}

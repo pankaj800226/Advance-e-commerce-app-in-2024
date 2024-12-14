@@ -1,0 +1,70 @@
+// Footer.scss
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid gainsboro;
+  
+    &__section {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px;
+      p{
+        color: gray;
+      }
+    }
+  
+    &__logo {
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin: 5px 0;
+      }
+    }
+  
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    &__social {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+  
+      img {
+        width: 24px;
+      }
+    }
+  
+    &__bottom {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      p{
+        color: #222;
+      }
+  
+      .footer__payment-icons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+  
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+  

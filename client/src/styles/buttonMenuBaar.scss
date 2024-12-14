@@ -1,0 +1,15 @@
+
+.buttom_menu_container{
+    position: fixed;
+    bottom: 0;
+    // top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+    .buttom_menu_container{
+        display: block;
+    }
+}
